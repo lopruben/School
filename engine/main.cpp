@@ -11,9 +11,9 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
-    QCryptographicHash md5Generator(QCryptographicHash::Sha1);
-    md5Generator.addData("abcdefghijklmnopqrstuvwxyz");
-    qDebug() << md5Generator.result().toHex();
+    QCryptographicHash hashGenerator(QCryptographicHash::Sha1);
+    hashGenerator.addData("abcdefghijklmnopqrstuvwxyz");
+    qDebug() << hashGenerator.result().toHex();
 
 
     //QImage img( "file:///E:/Users/lopruben/Documents/qt/school/qml/SchoolPrinter/engine/m.bmp" );
